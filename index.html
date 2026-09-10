@@ -2,9 +2,8 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-<title>ROI ARKAN REPORT — VOL. 2</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROI-ARKAN | Signalement WhatsApp</title>
 
 <style>
 *{
@@ -15,270 +14,187 @@
 
 body{
   font-family:Arial,Helvetica,sans-serif;
-  background:#020711;
-  color:#e8faff;
-  min-height:100vh;
-  overflow-x:hidden;
+  background:#f4f8f6;
+  color:#17221d;
+  line-height:1.6;
 }
 
-/* CYBER BACKGROUND */
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  opacity:.45;
-  background:
-    linear-gradient(rgba(0,210,255,.045) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(0,210,255,.045) 1px,transparent 1px);
-  background-size:35px 35px;
-}
-
-body::after{
-  content:"";
-  position:fixed;
-  width:500px;
-  height:500px;
-  top:-180px;
-  right:-180px;
-  border-radius:50%;
-  background:#00c8ff;
-  filter:blur(180px);
-  opacity:.12;
-  pointer-events:none;
-}
-
-.container{
-  width:92%;
-  max-width:1050px;
-  margin:auto;
-  position:relative;
-  z-index:2;
-}
-
-/* HEADER */
 header{
-  padding:20px 0;
-  border-bottom:1px solid rgba(0,220,255,.18);
-  background:rgba(1,8,17,.78);
-  backdrop-filter:blur(10px);
+  background:linear-gradient(135deg,#075e54,#128c7e);
+  color:white;
+  padding:18px 20px;
 }
 
-.header-row{
+.nav{
+  max-width:1100px;
+  margin:auto;
   display:flex;
   align-items:center;
   justify-content:space-between;
 }
 
 .logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
   font-size:24px;
-  font-weight:900;
-  letter-spacing:3px;
-  text-shadow:0 0 15px rgba(0,220,255,.6);
+  font-weight:800;
 }
 
-.logo span{
-  color:#00d9ff;
+.logo-icon{
+  width:45px;
+  height:45px;
+  border-radius:14px;
+  background:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:25px;
 }
 
-.status{
-  font-size:10px;
-  letter-spacing:2px;
-  color:#00eaff;
-  border:1px solid rgba(0,220,255,.3);
-  padding:8px 11px;
-  border-radius:20px;
-  background:rgba(0,200,255,.06);
+.nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+  font-weight:bold;
 }
 
-/* HERO */
 .hero{
-  text-align:center;
-  padding:45px 0 30px;
+  background:linear-gradient(135deg,#075e54,#19a58f);
+  color:white;
+  padding:65px 20px 80px;
 }
 
-.system{
+.hero-content{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:40px;
+  align-items:center;
+}
+
+.badge{
   display:inline-block;
-  font-family:monospace;
-  font-size:11px;
-  letter-spacing:2px;
-  color:#55dfff;
-  border:1px solid rgba(0,220,255,.25);
-  padding:10px 15px;
-  background:rgba(0,20,35,.7);
-  border-radius:8px;
-  margin-bottom:24px;
+  background:rgba(255,255,255,.15);
+  padding:8px 15px;
+  border-radius:30px;
+  margin-bottom:18px;
+  font-size:14px;
 }
 
 .hero h1{
-  font-size:clamp(32px,8vw,65px);
-  line-height:1;
-  letter-spacing:4px;
-  text-transform:uppercase;
-  text-shadow:
-    0 0 10px rgba(0,210,255,.55),
-    0 0 35px rgba(0,210,255,.18);
-}
-
-.hero h1 span{
-  color:#00d9ff;
+  font-size:48px;
+  line-height:1.1;
+  margin-bottom:18px;
 }
 
 .hero p{
-  max-width:680px;
-  margin:22px auto;
-  color:#819baa;
-  line-height:1.7;
-  font-size:14px;
+  font-size:19px;
+  opacity:.95;
+  margin-bottom:25px;
 }
 
-/* TERMINAL */
-.terminal{
-  background:rgba(1,9,18,.94);
-  border:1px solid rgba(0,215,255,.3);
-  border-radius:16px;
-  box-shadow:
-    0 0 30px rgba(0,170,255,.09),
-    inset 0 0 30px rgba(0,100,150,.04);
-  overflow:hidden;
-  margin:25px 0;
+.btn{
+  display:inline-block;
+  background:white;
+  color:#075e54;
+  padding:14px 22px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:800;
+  border:none;
+  cursor:pointer;
 }
 
-.terminal-top{
-  display:flex;
-  align-items:center;
-  gap:7px;
-  padding:12px 15px;
-  border-bottom:1px solid rgba(0,210,255,.15);
-  background:rgba(0,25,40,.55);
+.illustration{
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:30px;
+  padding:30px;
+  text-align:center;
+  box-shadow:0 20px 50px rgba(0,0,0,.12);
 }
 
-.dot{
-  width:8px;
-  height:8px;
-  border-radius:50%;
-  background:#1d6477;
+.shield{
+  font-size:110px;
+  margin-bottom:10px;
 }
 
-.terminal-title{
-  margin-left:8px;
-  font-family:monospace;
-  font-size:10px;
-  color:#6d9aa9;
+.section{
+  max-width:1100px;
+  margin:auto;
+  padding:60px 20px;
 }
 
-.terminal-body{
-  padding:18px;
-  font-family:monospace;
-  font-size:11px;
-  color:#53cde9;
-  line-height:1.9;
+.section-title{
+  text-align:center;
+  font-size:32px;
+  margin-bottom:12px;
+  color:#075e54;
 }
 
-.online{
-  color:#00eaff;
+.section-subtitle{
+  text-align:center;
+  color:#63716b;
+  margin-bottom:35px;
 }
 
-/* CARDS */
 .cards{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:14px;
-  margin:25px 0 35px;
+  gap:20px;
 }
 
 .card{
-  padding:20px;
-  background:rgba(4,17,29,.88);
-  border:1px solid rgba(0,200,255,.16);
-  border-radius:14px;
-  transition:.25s;
+  background:white;
+  padding:25px;
+  border-radius:18px;
+  box-shadow:0 8px 25px rgba(0,0,0,.07);
+  border:1px solid #e3ebe7;
 }
 
-.card:hover{
-  transform:translateY(-3px);
-  border-color:rgba(0,220,255,.5);
-  box-shadow:0 0 25px rgba(0,200,255,.12);
-}
-
-.icon{
-  font-size:25px;
-  margin-bottom:12px;
+.card-icon{
+  font-size:35px;
+  margin-bottom:10px;
 }
 
 .card h3{
-  font-size:14px;
-  letter-spacing:1px;
+  margin-bottom:8px;
+  color:#075e54;
+}
+
+.form-box{
+  max-width:760px;
+  margin:auto;
+  background:white;
+  padding:30px;
+  border-radius:22px;
+  box-shadow:0 12px 35px rgba(0,0,0,.08);
+}
+
+.form-group{
+  margin-bottom:20px;
+}
+
+label{
+  display:block;
+  font-weight:bold;
   margin-bottom:8px;
 }
 
-.card p{
-  color:#78909d;
-  font-size:12px;
-  line-height:1.6;
-}
-
-/* REPORT PANEL */
-.panel{
-  background:rgba(2,11,21,.96);
-  border:1px solid rgba(0,220,255,.35);
-  border-radius:18px;
-  padding:22px;
-  margin-bottom:35px;
-  box-shadow:0 0 40px rgba(0,140,210,.1);
-}
-
-.panel-head{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:15px;
-  padding-bottom:18px;
-  margin-bottom:5px;
-  border-bottom:1px solid rgba(0,200,255,.12);
-}
-
-.panel-head h2{
-  font-size:19px;
-  letter-spacing:1px;
-}
-
-.panel-code{
-  font-family:monospace;
-  font-size:9px;
-  color:#00d9ff;
-  border:1px solid rgba(0,220,255,.25);
-  padding:7px 9px;
-  border-radius:7px;
-}
-
-/* FORM */
-label{
-  display:block;
-  margin:17px 0 8px;
-  font-size:12px;
-  color:#b9dce8;
-  letter-spacing:.5px;
-}
-
-input,
-select,
-textarea{
+input,select,textarea{
   width:100%;
-  border:1px solid #153c4e;
-  background:#020a13;
-  color:#e9fbff;
-  border-radius:10px;
   padding:14px;
-  font-size:14px;
+  border:1px solid #ccd8d3;
+  border-radius:11px;
+  font-size:16px;
   outline:none;
 }
 
-input:focus,
-select:focus,
-textarea:focus{
-  border-color:#00d9ff;
-  box-shadow:0 0 15px rgba(0,210,255,.12);
+input:focus,select:focus,textarea:focus{
+  border-color:#128c7e;
+  box-shadow:0 0 0 3px rgba(18,140,126,.12);
 }
 
 textarea{
@@ -286,141 +202,90 @@ textarea{
   resize:vertical;
 }
 
-.file-box{
-  border:1px dashed #24576b;
-  border-radius:10px;
+.notice{
+  background:#fff8df;
+  border-left:5px solid #e2b93b;
   padding:15px;
-  background:#030d16;
-}
-
-.file-box input{
-  border:0;
-  padding:5px;
-}
-
-.confirm{
-  display:flex;
-  gap:10px;
-  align-items:flex-start;
-  margin:18px 0;
-  color:#7895a3;
-  font-size:11px;
-  line-height:1.6;
-}
-
-.confirm input{
-  width:auto;
-  margin-top:3px;
-}
-
-button{
-  width:100%;
-  border:0;
   border-radius:10px;
+  margin-bottom:22px;
+}
+
+.submit{
+  width:100%;
+  background:#075e54;
+  color:white;
   padding:16px;
-  background:#00c9f5;
-  color:#001018;
-  font-size:14px;
-  font-weight:900;
-  letter-spacing:1px;
-  cursor:pointer;
-  box-shadow:0 0 25px rgba(0,210,255,.22);
-}
-
-button:active{
-  transform:scale(.99);
-}
-
-/* SUCCESS */
-.success{
-  display:none;
-  margin-top:18px;
-  padding:18px;
-  border:1px solid #00d9ff;
+  border:none;
   border-radius:12px;
-  background:rgba(0,190,255,.07);
-  color:#c9f7ff;
-  font-size:13px;
-  line-height:1.7;
+  font-size:17px;
+  font-weight:bold;
+  cursor:pointer;
 }
 
-.report-id{
-  color:#00eaff;
-  font-family:monospace;
-  font-size:18px;
+.submit:hover{
+  background:#064c44;
 }
 
-/* WARNING */
-.warning{
-  margin-top:18px;
-  padding:13px;
-  border-left:3px solid #00bde8;
-  background:rgba(0,150,200,.05);
-  color:#75909e;
-  font-size:11px;
-  line-height:1.6;
-}
-
-/* SUPPORT */
-.support{
-  text-align:center;
-  padding:10px 0 50px;
-}
-
-.support h2{
-  font-size:18px;
-  margin-bottom:10px;
-}
-
-.support p{
-  color:#728996;
-  font-size:12px;
-  margin-bottom:18px;
-}
-
-.support a{
-  display:inline-block;
-  color:#00d9ff;
-  text-decoration:none;
-  border:1px solid #19485c;
-  padding:10px 13px;
-  border-radius:9px;
-  margin:4px;
-  font-size:11px;
-}
-
-/* FOOTER */
-footer{
-  border-top:1px solid rgba(0,200,255,.12);
-  text-align:center;
+.result{
+  display:none;
+  margin-top:22px;
+  background:#e8f8f2;
+  border:1px solid #a9dfcc;
   padding:20px;
-  color:#496572;
-  font-family:monospace;
-  font-size:10px;
-  letter-spacing:1px;
+  border-radius:14px;
 }
 
-/* MOBILE */
-@media(max-width:700px){
+.result strong{
+  color:#075e54;
+}
+
+.support{
+  background:#eaf5f2;
+}
+
+.support-buttons{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.support-btn{
+  background:#075e54;
+  color:white;
+  padding:14px 20px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+footer{
+  background:#10221d;
+  color:#dce9e4;
+  text-align:center;
+  padding:30px 20px;
+}
+
+footer a{
+  color:#72d6c2;
+  text-decoration:none;
+}
+
+@media(max-width:800px){
+  .hero-content{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:36px;
+  }
 
   .cards{
     grid-template-columns:1fr;
   }
 
-  .hero{
-    padding-top:35px;
-  }
-
-  .panel{
-    padding:17px;
-  }
-
-  .status{
+  .nav a{
     display:none;
-  }
-
-  .terminal-body{
-    font-size:9px;
   }
 }
 </style>
@@ -429,367 +294,289 @@ footer{
 <body>
 
 <header>
-  <div class="container header-row">
+  <div class="nav">
+    <div class="logo">
+      <div class="logo-icon">🛡️</div>
+      ROI-ARKAN
+    </div>
 
     <div>
-      <div class="logo">
-        ROI <span>ARKAN</span>
-      </div>
-
-      <div style="font-size:9px;color:#547381;letter-spacing:2px;margin-top:5px">
-        REPORT — VOL. 2
-      </div>
+      <a href="#signalement">Signaler</a>
+      <a href="#support">Support</a>
     </div>
-
-    <div class="status">
-      ● SYSTEM ONLINE
-    </div>
-
   </div>
 </header>
 
-
-<main class="container">
-
 <section class="hero">
+  <div class="hero-content">
 
-  <div class="system">
-    &gt; SECURE REPORTING NETWORK // ACTIVE
+    <div>
+      <span class="badge">PLATEFORME DE SIGNALEMENT</span>
+
+      <h1>Signalez les abus WhatsApp en toute simplicité.</h1>
+
+      <p>
+        ROI-ARKAN permet de préparer un signalement clair
+        concernant les fraudes, arnaques, usurpations,
+        spams et autres abus.
+      </p>
+
+      <a href="#signalement" class="btn">
+        📝 Faire un signalement
+      </a>
+    </div>
+
+    <div class="illustration">
+      <div class="shield">🛡️</div>
+      <h2>Protection &amp; vigilance</h2>
+      <p>
+        Utilisez uniquement des informations exactes
+        et des preuves authentiques.
+      </p>
+    </div>
+
   </div>
+</section>
 
-  <h1>
-    ROI ARKAN<br>
-    <span>REPORT</span>
-  </h1>
+<section class="section">
 
-  <p>
-    Plateforme moderne de signalement et de vérification
-    des activités suspectes ou abusives liées à WhatsApp.
+  <h2 class="section-title">Comment ça marche ?</h2>
+
+  <p class="section-subtitle">
+    Trois étapes simples pour préparer votre signalement.
   </p>
 
+  <div class="cards">
+
+    <div class="card">
+      <div class="card-icon">📱</div>
+      <h3>1. Identifiez</h3>
+      <p>
+        Indiquez le numéro WhatsApp concerné
+        et la nature du problème.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">📄</div>
+      <h3>2. Expliquez</h3>
+      <p>
+        Décrivez les faits avec précision
+        et ajoutez une preuve si nécessaire.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon">🔎</div>
+      <h3>3. Vérifiez</h3>
+      <p>
+        Relisez votre signalement avant de
+        l'envoyer au canal officiel approprié.
+      </p>
+    </div>
+
+  </div>
 </section>
 
+<section class="section" id="signalement">
 
-<!-- TERMINAL -->
+  <h2 class="section-title">Faire un signalement</h2>
 
-<div class="terminal">
+  <p class="section-subtitle">
+    Remplissez les informations ci-dessous.
+  </p>
 
-  <div class="terminal-top">
-    <div class="dot"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
+  <div class="form-box">
 
-    <div class="terminal-title">
-      ROI_ARKAN_SECURITY_CONSOLE
+    <div class="notice">
+      ⚠️ <strong>Important :</strong>
+      ne soumettez que des informations exactes.
+      Les faux signalements peuvent nuire à d'autres personnes.
     </div>
+
+    <form id="reportForm">
+
+      <div class="form-group">
+        <label for="phone">
+          Numéro WhatsApp concerné
+        </label>
+
+        <input
+          id="phone"
+          type="tel"
+          placeholder="+509 XX XX XX XX"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="reason">
+          Motif du signalement
+        </label>
+
+        <select id="reason" required>
+          <option value="">Sélectionnez un motif</option>
+          <option>Fraude / Arnaque</option>
+          <option>Vol</option>
+          <option>Spam</option>
+          <option>Usurpation d'identité</option>
+          <option>Menaces / Abus</option>
+          <option>Autre</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="email">
+          Votre adresse e-mail
+        </label>
+
+        <input
+          id="email"
+          type="email"
+          placeholder="exemple@email.com"
+          required
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="description">
+          Description des faits
+        </label>
+
+        <textarea
+          id="description"
+          placeholder="Expliquez clairement ce qui s'est passé..."
+          required
+        ></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="evidence">
+          Capture d'écran (facultatif)
+        </label>
+
+        <input
+          id="evidence"
+          type="file"
+          accept="image/*"
+        >
+      </div>
+
+      <button class="submit" type="submit">
+        Envoyer mon signalement
+      </button>
+
+    </form>
+
+    <div class="result" id="result">
+      <h3>✅ Signalement préparé</h3>
+
+      <p>
+        Votre référence est :
+        <strong id="reportId"></strong>
+      </p>
+
+      <p>
+        Conservez cette référence pour votre suivi.
+      </p>
+
+      <p>
+        Pour transmettre réellement le signalement à
+        WhatsApp, utilisez les canaux officiels ci-dessous.
+      </p>
+    </div>
+
   </div>
-
-  <div class="terminal-body">
-
-    &gt; INITIALISATION DU SYSTÈME... <span class="online">OK</span><br>
-
-    &gt; MODULE DE VÉRIFICATION... <span class="online">ACTIVE</span><br>
-
-    &gt; PROTECTION CONTRE LES FAUX SIGNALEMENTS... <span class="online">ACTIVE</span><br>
-
-    &gt; ÉTAT DU RÉSEAU... <span class="online">ONLINE</span><br>
-
-    &gt; EN ATTENTE D'UN NOUVEAU SIGNALEMENT...
-
-  </div>
-
-</div>
-
-
-<!-- CARDS -->
-
-<section class="cards">
-
-  <div class="card">
-
-    <div class="icon">🛡️</div>
-
-    <h3>PROTECTION</h3>
-
-    <p>
-      Les signalements doivent contenir des informations
-      exactes et vérifiables.
-    </p>
-
-  </div>
-
-
-  <div class="card">
-
-    <div class="icon">🔎</div>
-
-    <h3>VÉRIFICATION</h3>
-
-    <p>
-      Les informations fournies peuvent être examinées
-      avant toute décision.
-    </p>
-
-  </div>
-
-
-  <div class="card">
-
-    <div class="icon">📡</div>
-
-    <h3>ASSISTANCE</h3>
-
-    <p>
-      Accédez également aux ressources officielles
-      de support WhatsApp.
-    </p>
-
-  </div>
-
 </section>
 
+<section class="section support" id="support">
 
-<!-- REPORT FORM -->
-
-<section class="panel">
-
-  <div class="panel-head">
-
-    <h2>
-      Nouveau signalement
-    </h2>
-
-    <div class="panel-code">
-      MODULE: REPORT_01
-    </div>
-
-  </div>
-
-
-  <form id="reportForm">
-
-    <label>
-      NUMÉRO WHATSAPP CONCERNÉ
-    </label>
-
-    <input
-      type="tel"
-      id="phone"
-      placeholder="+509 XX XX XX XX"
-      required
-    >
-
-
-    <label>
-      TYPE D'ACTIVITÉ
-    </label>
-
-    <select id="reason" required>
-
-      <option value="">
-        Sélectionner une catégorie
-      </option>
-
-      <option>
-        Fraude / Escroquerie
-      </option>
-
-      <option>
-        Vol
-      </option>
-
-      <option>
-        Spam
-      </option>
-
-      <option>
-        Usurpation d'identité
-      </option>
-
-      <option>
-        Menaces / Harcèlement
-      </option>
-
-      <option>
-        Autre activité abusive
-      </option>
-
-    </select>
-
-
-    <label>
-      DESCRIPTION DE L'ACTIVITÉ DU COMPTE
-    </label>
-
-    <textarea
-      id="description"
-      placeholder="Décrivez clairement l'activité du compte, ce qui s'est passé et pourquoi vous pensez qu'il s'agit d'un abus..."
-      required
-    ></textarea>
-
-
-    <label>
-      VOTRE ADRESSE E-MAIL
-    </label>
-
-    <input
-      type="email"
-      id="email"
-      placeholder="votre@email.com"
-      required
-    >
-
-
-    <label>
-      CAPTURE D'ÉCRAN / PREUVE
-    </label>
-
-    <div class="file-box">
-
-      <input
-        type="file"
-        id="evidence"
-        accept="image/*"
-      >
-
-    </div>
-
-
-    <label class="confirm">
-
-      <input
-        type="checkbox"
-        required
-      >
-
-      <span>
-        Je confirme que les informations fournies sont exactes
-        et que je ne cherche pas à effectuer un faux signalement
-        ou à harceler un autre utilisateur.
-      </span>
-
-    </label>
-
-
-    <button type="submit">
-      ⚡ ENREGISTRER LE SIGNALEMENT
-    </button>
-
-
-    <div class="warning">
-
-      ⚠️ ROI ARKAN ne garantit pas la suspension d'un compte.
-      Toute décision concernant un compte WhatsApp appartient
-      à WhatsApp et dépend de ses propres règles et procédures.
-
-    </div>
-
-
-    <div class="success" id="success">
-
-      <strong>✓ SIGNALEMENT ENREGISTRÉ</strong>
-
-      <br><br>
-
-      Numéro de dossier :
-
-      <div class="report-id" id="reportId"></div>
-
-      <br>
-
-      Conservez ce numéro pour votre suivi.
-
-    </div>
-
-  </form>
-
-</section>
-
-
-<!-- OFFICIAL SUPPORT -->
-
-<section class="support">
-
-  <h2>
-    Support officiel WhatsApp
+  <h2 class="section-title">
+    Support WhatsApp officiel
   </h2>
 
-  <p>
-    Pour un signalement direct ou une demande d'assistance,
-    utilisez les ressources officielles de WhatsApp.
+  <p class="section-subtitle">
+    ROI-ARKAN ne prétend pas être WhatsApp.
+    Pour contacter WhatsApp, utilisez uniquement ses canaux officiels.
   </p>
 
+  <div class="support-buttons">
 
-  <a
-    href="https://faq.whatsapp.com/"
-    target="_blank"
-  >
-    Centre d'aide
-  </a>
+    <a
+      class="support-btn"
+      href="https://faq.whatsapp.com/"
+      target="_blank"
+      rel="noopener"
+    >
+      💬 Centre d'aide WhatsApp
+    </a>
 
+    <a
+      class="support-btn"
+      href="https://faq.whatsapp.com/414631957536067/"
+      target="_blank"
+      rel="noopener"
+    >
+      🚨 Signaler et bloquer
+    </a>
 
-  <a
-    href="https://faq.whatsapp.com/414631957536067/"
-    target="_blank"
-  >
-    Signaler / Bloquer
-  </a>
+    <a
+      class="support-btn"
+      href="https://faq.whatsapp.com/1649701202294123"
+      target="_blank"
+      rel="noopener"
+    >
+      📞 Informations support
+    </a>
 
-
-  <a
-    href="https://faq.whatsapp.com/1649701202294123"
-    target="_blank"
-  >
-    Assistance WhatsApp
-  </a>
+  </div>
 
 </section>
-
-</main>
-
 
 <footer>
 
-  ROI ARKAN REPORT — VOL. 2
-  <br>
-  SECURE REPORTING INTERFACE • 2026
+  <h3>ROI-ARKAN</h3>
+
+  <p>
+    Plateforme indépendante de préparation
+    de signalements d'abus.
+  </p>
+
+  <p style="margin-top:12px;">
+    © 2026 ROI-ARKAN — Tous droits réservés.
+  </p>
+
+  <p style="margin-top:10px;">
+    <a href="https://faq.whatsapp.com/" target="_blank">
+      Centre d'aide WhatsApp officiel
+    </a>
+  </p>
 
 </footer>
 
-
 <script>
+document.getElementById("reportForm").addEventListener("submit", function(event){
 
-document
-.getElementById("reportForm")
-.addEventListener("submit", function(e){
-
-  e.preventDefault();
+  event.preventDefault();
 
   const id =
     "RA-" +
-    Math.floor(
-      10000000 +
-      Math.random() * 90000000
-    );
+    Date.now().toString().slice(-8);
 
-  document
-    .getElementById("reportId")
-    .textContent = id;
+  document.getElementById("reportId").textContent = id;
 
-  document
-    .getElementById("success")
-    .style.display = "block";
+  document.getElementById("result").style.display = "block";
 
-  document
-    .getElementById("success")
-    .scrollIntoView({
-      behavior:"smooth",
-      block:"center"
-    });
+  document.getElementById("result").scrollIntoView({
+    behavior:"smooth",
+    block:"center"
+  });
 
 });
-
 </script>
 
 </body>
-  </html>
+    </html>    
+            
+    
+  
